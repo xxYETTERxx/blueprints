@@ -1,0 +1,39 @@
+{
+    "format_version": "1.26.40",
+    "minecraft:block": {
+        "description": {
+            "identifier": "blueprint:pin_out",
+            "menu_category": {
+                "category": "none"
+            },
+            "states": {
+                "blueprint:lit": [false, true]
+            }
+        },
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "blueprint:pin_out_off"
+                }
+            },
+            "minecraft:destructible_by_mining": false,
+            "minecraft:redstone_consumer": {
+                "min_power": 0
+            },
+            "blueprint:pin_out": {}
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('blueprint:lit')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "blueprint:pin_out_on"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

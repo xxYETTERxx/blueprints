@@ -1,0 +1,4 @@
+tile.blueprint:component_block.name=Component Block
+tile.blueprint:pin_in.name=Input Pin
+tile.blueprint:pin_out.name=Output Pin
+item.blueprint:component_copy.name=Component Copy

@@ -1,0 +1,9 @@
+{
+    "resource_pack_name": "blueprint",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "blueprint:component_copy": {
+            "textures": "textures/items/component_copy"
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "name": "redstone-blueprint",
+    "private": true,
+    "description": "Redstone Blueprint Bedrock add-on. Dev dependencies only provide editor autocomplete.",
+    "devDependencies": {
+        "@minecraft/server": "2.5.0"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Redstone Blueprint Dev RP",
+        "description": "Enterable circuit components. Resource pack.",
+        "uuid": "d75ba040-0ed2-4f60-a041-d9f4231eb8c4",
+        "version": [0, 1, 0],
+        "min_engine_version": [1, 26, 40]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "90a85d1b-2a0e-468a-991b-61d026b6f194",
+            "version": [0, 1, 0]
+        }
+    ]
+}

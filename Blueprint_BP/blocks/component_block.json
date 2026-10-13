@@ -1,0 +1,248 @@
+{
+    "format_version": "1.26.40",
+    "minecraft:block": {
+        "description": {
+            "identifier": "blueprint:component_block",
+            "menu_category": {
+                "category": "items"
+            },
+            "states": {
+                "blueprint:on": [
+                    false,
+                    true
+                ],
+                "blueprint:last": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "blueprint:status": [
+                    "blank",
+                    "config",
+                    "ready"
+                ]
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": [
+                        "minecraft:cardinal_direction"
+                    ]
+                }
+            }
+        },
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "blueprint:component_side_in_idle"
+                },
+                "north": {
+                    "texture": "blueprint:component_out_off"
+                },
+                "up": {
+                    "texture": "blueprint:component_top"
+                },
+                "down": {
+                    "texture": "blueprint:component_bottom"
+                }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.5
+            },
+            "minecraft:map_color": "#6b6b6b",
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:redstone_conductivity": {
+                "redstone_conductor": false,
+                "allows_wire_to_step_down": true
+            },
+            "minecraft:redstone_producer": {
+                "power": 0
+            },
+            "minecraft:tick": {
+                "interval_range": [
+                    2,
+                    2
+                ],
+                "looping": true
+            },
+            "blueprint:gate": {}
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('blueprint:on')",
+                "components": {
+                    "minecraft:redstone_producer": {
+                        "power": 15
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('blueprint:status') == 'blank' && !q.block_state('blueprint:on')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "blueprint:component_side_in_idle"
+                        },
+                        "north": {
+                            "texture": "blueprint:component_out_off"
+                        },
+                        "up": {
+                            "texture": "blueprint:component_top"
+                        },
+                        "down": {
+                            "texture": "blueprint:component_bottom"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('blueprint:status') == 'blank' && q.block_state('blueprint:on')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "blueprint:component_side_in_idle"
+                        },
+                        "north": {
+                            "texture": "blueprint:component_out_on"
+                        },
+                        "up": {
+                            "texture": "blueprint:component_top"
+                        },
+                        "down": {
+                            "texture": "blueprint:component_bottom"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('blueprint:status') == 'config' && !q.block_state('blueprint:on')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "blueprint:component_side_in_seq"
+                        },
+                        "north": {
+                            "texture": "blueprint:component_out_off"
+                        },
+                        "up": {
+                            "texture": "blueprint:component_top"
+                        },
+                        "down": {
+                            "texture": "blueprint:component_bottom"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('blueprint:status') == 'config' && q.block_state('blueprint:on')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "blueprint:component_side_in_seq"
+                        },
+                        "north": {
+                            "texture": "blueprint:component_out_on"
+                        },
+                        "up": {
+                            "texture": "blueprint:component_top"
+                        },
+                        "down": {
+                            "texture": "blueprint:component_bottom"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('blueprint:status') == 'ready' && !q.block_state('blueprint:on')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "blueprint:component_side_in_complete"
+                        },
+                        "north": {
+                            "texture": "blueprint:component_out_off"
+                        },
+                        "up": {
+                            "texture": "blueprint:component_top"
+                        },
+                        "down": {
+                            "texture": "blueprint:component_bottom"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('blueprint:status') == 'ready' && q.block_state('blueprint:on')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "blueprint:component_side_in_complete"
+                        },
+                        "north": {
+                            "texture": "blueprint:component_out_on"
+                        },
+                        "up": {
+                            "texture": "blueprint:component_top"
+                        },
+                        "down": {
+                            "texture": "blueprint:component_bottom"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

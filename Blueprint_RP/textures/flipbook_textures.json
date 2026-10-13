@@ -1,0 +1,8 @@
+[
+    {
+        "flipbook_texture": "textures/blocks/component_side_in_seq",
+        "atlas_tile": "blueprint:component_side_in_seq",
+        "ticks_per_frame": 4,
+        "frames": [0, 1, 2, 3]
+    }
+]

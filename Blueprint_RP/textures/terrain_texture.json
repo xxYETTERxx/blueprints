@@ -1,0 +1,36 @@
+{
+    "resource_pack_name": "blueprint",
+    "texture_name": "atlas.terrain",
+    "texture_data": {
+        "blueprint:component_block": {
+            "textures": "textures/blocks/target_side"
+        },
+        "blueprint:component_side_in": {
+            "textures": "textures/blocks/component_side_in"
+        },
+        "blueprint:component_out_off": {
+            "textures": "textures/blocks/component_out_off"
+        },
+        "blueprint:component_out_on": {
+            "textures": "textures/blocks/component_out_on"
+        },
+        "blueprint:component_top": {
+            "textures": "textures/blocks/component_top"
+        },
+        "blueprint:component_bottom": {
+            "textures": "textures/blocks/component_bottom"
+        },
+        "blueprint:pin_in_off": {
+            "textures": "textures/blocks/lapis_block"
+        },
+        "blueprint:pin_in_on": {
+            "textures": "textures/blocks/redstone_block"
+        },
+        "blueprint:pin_out_off": {
+            "textures": "textures/blocks/redstone_lamp_off"
+        },
+        "blueprint:pin_out_on": {
+            "textures": "textures/blocks/redstone_lamp_on"
+        }
+    }
+}

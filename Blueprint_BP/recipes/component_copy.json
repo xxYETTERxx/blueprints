@@ -1,0 +1,15 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "blueprint:component_copy"
+        },
+        "tags": ["crafting_table"],
+        "unlock": [{ "item": "blueprint:component_block" }],
+        "ingredients": [
+            { "item": "blueprint:component_block" },
+            { "item": "blueprint:component_block" }
+        ],
+        "result": { "item": "blueprint:component_copy", "count": 2 }
+    }
+}
